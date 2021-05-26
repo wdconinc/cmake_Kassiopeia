@@ -34,8 +34,9 @@ mkdir -p Kassiopeia-${version}-build
 cd Kassiopeia-${version}-build
 
 echo "Configuring Kassiopeia ${version}..."
-cmake -DCMAKE_BUILD_TYPE=Debug \
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
  -DCMAKE_INSTALL_PREFIX=/usr/local/Kassiopeia/${version} \
+ -DCMAKE_CXX_STANDARD=17 \
  -DKassiopeia_ENABLE_DEBUG=ON \
  -DKommon_ENABLE_DEBUG=ON \
  -DKGeoBag_ENABLE_DEBUG=ON \
